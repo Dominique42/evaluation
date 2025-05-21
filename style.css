@@ -24,5 +24,75 @@
 }
 
 .logo{
-    width: 100px;
+    width: 60px;
 }
+
+.couleurheader{
+    background-color: rgb(209, 117, 71);
+}
+
+.pad20{
+    padding: 20px;
+}
+
+.teinteecrit{
+    color: white;
+}
+
+.hauteur{
+    height: 100px;
+}
+
+.marge{
+    margin: 20px;
+}
+
+.centrer{
+    text-align: center;
+}
+
+.pad40{
+    padding: 40px;
+}
+
+.couleur{
+    background-color: rgb(189, 156, 114);
+}
+
+.espace{
+    word-spacing: 20px;
+}
+
+.decoration{
+    text-decoration: none;
+}
+
+.hautdiv{
+    height: 200px;
+}
+
+.lignes{
+   margin-bottom: 30px;
+}
+
+.teinte{
+    color: rgb(216, 182, 140);
+}
+
+.card{
+    width: 30%;
+}
+.card img{
+    /*vous images : adaptez vous a votre parent*/
+    width: 100%;
+}
+
+
+.style{
+    list-style: none;
+}
+
+.width{
+    width: 300px;
+}
+
