@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,7 +7,7 @@
 
 
 
-.header{
+.header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -15,84 +15,84 @@
 }
 
 .flex {
-        display: flex;
-        flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.space{
+.space {
     justify-content: space-between;
 }
 
-.logo{
+.logo {
     width: 60px;
 }
 
-.couleurheader{
+.couleurheader {
     background-color: rgb(209, 117, 71);
 }
 
-.pad20{
+.pad20 {
     padding: 20px;
 }
 
-.teinteecrit{
+.teinteecrit {
     color: white;
 }
 
-.hauteur{
+.hauteur {
     height: 100px;
 }
 
-.marge{
+.marge {
     margin: 20px;
 }
 
-.centrer{
+.centrer {
     text-align: center;
 }
 
-.pad40{
+.pad40 {
     padding: 40px;
 }
 
-.couleur{
+.couleur {
     background-color: rgb(189, 156, 114);
 }
 
-.espace{
+.espace {
     word-spacing: 20px;
 }
 
-.decoration{
+.decoration {
     text-decoration: none;
 }
 
-.hautdiv{
+.hautdiv {
     height: 200px;
 }
 
-.lignes{
-   margin-bottom: 30px;
+.lignes {
+    margin-bottom: 30px;
 }
 
-.teinte{
+.teinte {
     color: rgb(216, 182, 140);
 }
 
-.card{
+.card {
     width: 30%;
 }
-.card img{
+
+.card img {
     /*vous images : adaptez vous a votre parent*/
     width: 100%;
 }
 
 
-.style{
+.style {
     list-style: none;
 }
 
-.width{
+.width {
     width: 300px;
 }
-
