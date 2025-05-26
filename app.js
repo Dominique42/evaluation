@@ -9,6 +9,7 @@ fetch(`instruments-musique-monde.json`)
 
         afficheLesProduits(data.produits)
         afficherNomEntreprise(data)
+        afficherAccroche(data)
     })
 
 
@@ -41,7 +42,7 @@ function afficheLesProduits(produits) {
 //je veux afficher le nom de l'entreprise
 
 function afficherNomEntreprise(donnee) {
-    document.getElementById(`header`).innerHTML+=`
+    document.getElementById(`header`).innerHTML += `
     
     <img class="logo" src="assets/ogo-instrument-2.png" alt="logo"id=header">
     ${donnee.nomEntreprise}
@@ -57,3 +58,21 @@ function afficherNomEntreprise(donnee) {
 `
 };
 
+//je veux afficher l'accroche
+
+function afficherAccroche(donnees) {
+    document.getElementById(`hero`).innerHTML += `
+
+
+ <div class="centrer hautdiv couleur" id="hero">
+        <img src="" alt="">
+        <h1 class="lignes">MusicHalle - Instruments du Monde</h1> 
+        <p class="lignes">${donnees.accroche}
+        </p>
+        <a href="" class="lignes">${donnees.callToAction}</a>
+
+        <!-- intitulés des thémes -->
+
+    </div>
+    `
+};
