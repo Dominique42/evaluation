@@ -57,6 +57,7 @@
 
 .couleur {
     background-color: rgb(189, 156, 114);
+    padding: 32px 0px;
 }
 
 .espace {
@@ -81,6 +82,8 @@
 
 .card {
     width: 30%;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 .card img {
@@ -96,3 +99,12 @@
 .width {
     width: 300px;
 }
+
+.container{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 96px;
+}
+
+

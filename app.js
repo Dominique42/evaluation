@@ -10,7 +10,10 @@ fetch(`instruments-musique-monde.json`)
         afficheLesProduits(data.produits)
         afficherNomEntreprise(data)
         afficherAccroche(data)
-        afficherInstruments
+        afficherLesServices(data.services)
+        afficheLesPromesses(data.promesses)
+        afficherTemoignages(data.temoignages)
+       
     })
 
 
@@ -28,8 +31,7 @@ function afficheLesProduits(produits) {
         div.innerHTML += `
      <div class="card">
                 <img class=""
-                    src="https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/images/instruments-musique-monde/hang.webp"
-                    alt="">
+                    src="${produit.imageurl}" alt="">
                 <h3>${produit.nom}</h3>
                 <p>${produit.description}Découvrez les sonorités apaisantes du hang, un instrument mélodique captivant. Parfait pour créer une
                     atmosphère paisible et méditative.</p>
@@ -65,21 +67,100 @@ function afficherAccroche(donnees) {
     document.getElementById(`hero`).innerHTML += `
 
 
- <div class="centrer hautdiv couleur" id="hero">
+ 
         <img src="" alt="">
         <h1 class="lignes">MusicHalle - Instruments du Monde</h1> 
         <p class="lignes">${donnees.accroche}
         </p>
         <a href="" class="lignes">${donnees.callToAction}</a>
 
-        <!-- intitulés des thémes -->
-
-    </div>
+    
     `
 };
 
-//afficher les instruments
+//afficher les services
 
-instruments.forEach(element => {
+function afficherLesServices(tableauServices){
+
+tableauServices.forEach(service=>{
+document.getElementById(`suite`).innerHTML+=`
+
+
     
-});
+        <div class="card">
+            <h3>${service.nom}</h3>
+            <p> ${service.description}
+            </p>
+            <img src="${service.imageurl}"
+                alt="">
+
+        </div>
+    
+`
+})
+
+};
+
+function afficheLesPromesses(Promess) {
+    // je vais dans  le document chercher la div qui a l'id promess
+
+         document.getElementById('promess').innerHTML += `
+   
+            <li><a href="">${Promess[0]}</a> </li>
+            <li><a href="">${Promess[1]}</a> </li>
+            <li><a href="">${Promess[2]}</a> </li>
+        
+    `
+; }  
+
+
+//parametre : temoignages le tableau des avis clients
+function afficherTemoignages(temoignages){
+
+temoignages.forEach(t=>{
+    document.getElementById(`temoignages`).innerHTML+=`
+
+    <div class="couleur card">
+            
+
+            <h4>${t.prenom}</h4>
+            <p>${etoiles(t.note)}</p>
+            <p>${t.prestation}</p>
+
+
+            <p>${t.commentaire}J'ai découvert une superbe kora chez MusicHalle. Le personnel m'a guidé avec passion, et maintenant je peux
+                explorer les magnifiques sonorités de la musique africaine chez moi. Merci !</p>
+    </div>
+        
+    `
+})
+}
+
+
+// role: une fonction qui me retourne une chaine de caractere avec des etoiles en fonction de la note donnée par le client
+// parametre : note , un nombre sur 5
+// retour : les etoiles (chaine de caractere)
+function etoiles(note) {
+    if(note === 5){
+        return '★★★★★'
+    }
+        
+    if (note === 4){
+        return `★★★★`
+    }
+    
+    if(note===3){
+        return `★★★`
+    }
+    if(note===2){
+        return `★★`
+    }
+    if(note===1){
+        return `★`
+    }
+    
+    
+    
+
+}
+
