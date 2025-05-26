@@ -10,6 +10,7 @@ fetch(`instruments-musique-monde.json`)
         afficheLesProduits(data.produits)
         afficherNomEntreprise(data)
         afficherAccroche(data)
+        afficherInstruments
     })
 
 
@@ -76,3 +77,9 @@ function afficherAccroche(donnees) {
     </div>
     `
 };
+
+//afficher les instruments
+
+instruments.forEach(element => {
+    
+});
